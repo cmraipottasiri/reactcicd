@@ -11,6 +11,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -27,10 +28,11 @@ jobs:
         run: npm run build
 
       - name: Configure Git identity
-        run: |
-        git config --global user.name "cmrai.pottasiri"
+        run: 
+	  git config --global user.name "cmrai.pottasiri"
           git config --global user.email "cmrai.pottasiri@gmail.com"
 
+          
       - name: Authenticate and deploy to GitHub Pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
