@@ -27,7 +27,7 @@ jobs:
 
       - name: Configure Git identity
         run: |
-          git config --global user.name "cmraipottasiri
+          git config --global user.name "cmraipottasiri"
           git config --global user.email  "cmrai.pottasiri@gmail.com"
 
       - name: Authenticate and deploy to GitHub Pages
